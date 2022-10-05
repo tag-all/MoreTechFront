@@ -1,9 +1,15 @@
-import { Layout } from "./components/Layout/Layout";
+import {useRoutes} from "./routes";
+import {BrowserRouter as Router} from "react-router-dom";
 
 export const App = () => {
-  return (
-    <Layout>
-      More.Tech
-    </Layout>
-  );
+
+    const routes = useRoutes();
+
+    return (
+        <Router>
+            <div>
+                {routes}
+            </div>
+        </Router>
+    );
 };
