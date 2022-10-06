@@ -1,9 +1,30 @@
 .header {
-    width: 100%;
+    --w-header: 100%;
+    width: var(--w-header);
     height: 65px;
     display: flex;
     position: sticky;
     top: 0;
     z-index: 1;
-    background: grey;
+    background: var(--color-primary);
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+
 }
