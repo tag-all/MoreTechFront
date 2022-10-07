@@ -1,0 +1,66 @@
+.profile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    --width: 782px;
+}
+
+.picture {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: var(--width);
+    height: 179px;
+    z-index: 5;
+    background-image: url("../../Assets/images/profile-image.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    height: 42px;
+    width: var(--width);
+    flex-wrap: wrap;
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.barFlex {
+    display: flex;
+    align-items: center;
+}
+
+.par {
+    margin: 0 0 0 10px;
+    text-align: center;
+}
+
+.number {
+    border-radius: 50% 50%;
+    width: 42px;
+    height: 42px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.button {
+    display: flex;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    width: 150px;
+    border-radius: 6px;
+    border: none;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+
+.progress {
+    display: block;
+}

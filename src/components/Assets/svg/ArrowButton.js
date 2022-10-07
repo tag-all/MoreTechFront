@@ -1,4 +1,4 @@
-const ArrowButton = (props) => (
+export const ArrowButton = (props) => (
     <svg
         width={16}
         height={16}
