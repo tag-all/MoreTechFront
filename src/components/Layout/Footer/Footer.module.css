@@ -44,8 +44,7 @@
     width: 256px;
     border-radius: 9px;
     border: 1px solid var(--color-blue);
-    padding-left: 23px;
-    padding-right: 6px;
+    padding: 6px 6px 6px 23px;
     display: flex;
     justify-content: space-between;
     align-items: center;
