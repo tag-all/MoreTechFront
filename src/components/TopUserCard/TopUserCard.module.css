@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 12px 17px;
+    padding: 12px 20px;
     height: 80px;
 }
 
@@ -16,39 +16,42 @@
 }
 
 .position {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Medium', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
-    margin: 0 15px 0 0;
+    margin: 0 20px 0 0;
     color: #FFFFFF;
 }
 
 .avatar {
-    margin-right: 10px;
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
 }
 
 .name {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Regular', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
     margin: 0;
+    letter-spacing: 1px;
     color: #FFFFFF;
 }
 
 .lvl {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
     background: #4789EB;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Medium', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 100%;
     color: #FFFFFF;
     display: flex;
     align-items: center;

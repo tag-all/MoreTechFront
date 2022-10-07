@@ -13,6 +13,10 @@ export const OffersSection = () => {
 		{
 			title: "Запишитесь на мероприятие и получите свой первый NFT!",
 			img: img2
+		},
+		{
+			title: "Еще что-то просто невероятное!",
+			img: img2
 		}
 	]
 

@@ -1,5 +1,5 @@
 import {Layout} from "../../components/Layout/Layout";
-import {Achievements} from "../../components/Layout/Achievements/Achievements";
+import {Achievements} from "../../components/Achievements/Achievements";
 
 export const AchievementsPage = () => {
     return (

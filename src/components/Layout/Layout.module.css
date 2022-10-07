@@ -3,9 +3,11 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("../Assets/images/background_image.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
+    /*background-image: url("../Assets/images/background_image.jpg");*/
+    /*background-repeat: repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background: rgb(65,89,123);*/
+    background: linear-gradient(180deg, rgb(52, 77, 105) 0%, rgba(1,2,4,1) 100%);
 }
 

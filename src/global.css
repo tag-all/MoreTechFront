@@ -28,17 +28,26 @@ button {
   white-space: nowrap;
 }
 
+a {
+  cursor: pointer;
+}
+
+p {
+  font-family: 'Raleway Regular', sans-serif;
+}
+
 .btn_filled {
   background: #4789EB;
   border-radius: 5px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway Medium', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   border: none;
-  height: 30px;
-  padding: 0px 20px;
+  height: 40px;
+  padding: 0px 30px;
+  letter-spacing: 1px;
   /* identical to box height */
 
   color: #FFFFFF;
@@ -46,11 +55,26 @@ button {
 }
 
 .section__title {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway Regular', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
 
   color: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'Raleway Regular';
+  src: url('./assets/fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway Medium';
+  src: url('./assets/fonts/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url('./assets/fonts/Raleway-SemiBold.ttf') format('truetype');
 }

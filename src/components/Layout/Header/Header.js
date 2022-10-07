@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Header.module.css';
 import { NavigationMenu } from './NavigationMenu/NavigationMenu';
-import {Search} from "../Search/Search";
+import {Search} from "../../Search/Search";
 import {BalanceBox} from "./BalanceBox/BalanceBox";
-import {Logo} from "../../Assets/svg/Logo";
-import {MenuIcon} from "../../Assets/svg/MenuIcon";
+import {Logo} from "../../../assets/svg/Logo";
+import {MenuIcon} from "../../../assets/svg/MenuIcon";
 
 
 export const Header = () => {
@@ -20,9 +20,9 @@ export const Header = () => {
                 closeHandler={toggleIsNavigationMenuOpen}
             />
             <div className={styles.left}>
-                <div className={styles.logo}>
+                <a href={'/'} className={styles.logo}>
                     <Logo/>
-                </div>
+                </a>
                 <Search/>
             </div>
             <div className={styles.right} >

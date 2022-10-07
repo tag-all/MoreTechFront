@@ -1,5 +1,5 @@
 import styles from './Profile.module.css';
-import {ArrowButton} from "../../Assets/svg/ArrowButton";
+import {ArrowButton} from "../../assets/svg/ArrowButton";
 
 export const Profile = () => {
     return (

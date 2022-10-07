@@ -10,23 +10,23 @@ export const TopUsers = () => {
 		},
 		{
 			name: "Ясос Биба",
-			lvl: 10
+			lvl: 8
 		},
 		{
 			name: "Ясос Биба",
-			lvl: 10
+			lvl: 7
 		},
 		{
 			name: "Ясос Биба",
-			lvl: 10
+			lvl: 6
 		},
 		{
 			name: "Ясос Биба",
-			lvl: 10
+			lvl: 5
 		},
 		{
 			name: "Ясос Биба",
-			lvl: 10
+			lvl: 4
 		},
 	]
 
