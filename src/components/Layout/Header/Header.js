@@ -27,7 +27,7 @@ export const Header = () => {
             </div>
             <div className={styles.right} >
                 <BalanceBox amount={35}/>
-                <MenuIcon/>
+                <MenuIcon onClick={toggleIsNavigationMenuOpen}/>
             </div>
         </header>
     );
