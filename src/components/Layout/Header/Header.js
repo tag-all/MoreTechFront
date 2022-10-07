@@ -5,6 +5,7 @@ import {Search} from "../../Search/Search";
 import {BalanceBox} from "./BalanceBox/BalanceBox";
 import {Logo} from "../../../assets/svg/Logo";
 import {MenuIcon} from "../../../assets/svg/MenuIcon";
+import {Link} from "react-router-dom";
 
 
 export const Header = () => {
@@ -20,9 +21,9 @@ export const Header = () => {
                 closeHandler={toggleIsNavigationMenuOpen}
             />
             <div className={styles.left}>
-                <a href={'/'} className={styles.logo}>
+                <Link to={'/'} className={styles.logo}>
                     <Logo/>
-                </a>
+                </Link>
                 <Search/>
             </div>
             <div className={styles.right} >
