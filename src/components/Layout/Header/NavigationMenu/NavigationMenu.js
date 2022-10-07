@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './NavigationMenu.module.css';
 import close from '../../../../assets/svg/Cross.svg'
 import enter from '../../../../assets/svg/Enter.svg'
+import {Link} from "react-router-dom";
 
 export const NavigationMenu = ({
     isOpen,
@@ -24,6 +25,17 @@ export const NavigationMenu = ({
                     <button className={styles.closeBtn} onClick={closeHandler}>
                         <img src={close} alt="close"/>
                     </button>
+                </div>
+                <div className={styles.navigationLinks}>
+                    <Link to="/" className={styles.navigationLinksItem}>
+                        Главная
+                    </Link>
+                    <Link to="/profile" className={styles.navigationLinksItem}>
+                        Мой профиль
+                    </Link>
+                    <Link to="/achievements" className={styles.navigationLinksItem}>
+                        Достижения
+                    </Link>
                 </div>
             </div>
         </>

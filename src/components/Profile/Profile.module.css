@@ -11,7 +11,6 @@
     margin-bottom: 70px;
     width: var(--width);
     height: 179px;
-    z-index: 5;
     background-image: url("../../assets/img/profile-image.jpg");
     background-position: center;
     background-size: cover;
