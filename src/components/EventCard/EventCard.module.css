@@ -1,0 +1,74 @@
+.card {
+    background: rgba(12, 15, 18, 0.73);
+    border: 1px solid #333941;
+    border-radius: 9px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*min-height: 170px;*/
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.title {
+    font-family: 'Raleway Medium', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.text {
+
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    height: 100%;
+    color: #FFFFFF;
+}
+
+.date {
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.rewardsTitle {
+    font-family: 'Raleway Medium', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.reward {
+
+    font-family: 'Raleway Medium', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    margin: 5px 0;
+    /* Основной синий */
+    color: var(--color-blue);
+}
+

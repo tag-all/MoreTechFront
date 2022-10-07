@@ -45,14 +45,40 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  border: none;
+  border: 1px solid transparent;
   height: 40px;
   padding: 0px 30px;
   letter-spacing: 1px;
   /* identical to box height */
 
   color: #FFFFFF;
+}
 
+.btn_filled:hover {
+  background: rgba(12, 15, 18, 0.73);
+  border: 1px solid #4789EB;
+}
+
+.btn_outlined {
+  background: rgba(12, 15, 18, 0.73);
+  border: 1px solid #4789EB;
+  border-radius: 5px;
+  font-family: 'Raleway Medium', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  height: 40px;
+  padding: 0px 30px;
+  letter-spacing: 1px;
+  /* identical to box height */
+
+  color: #FFFFFF;
+}
+
+.btn_outlined:hover {
+  background: #4789EB;
+  border: 1px solid transparent;
 }
 
 .section__title {
@@ -61,7 +87,7 @@ p {
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
-
+  margin-bottom: 30px;
   color: #FFFFFF;
 }
 
