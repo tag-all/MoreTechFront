@@ -1,0 +1,58 @@
+.card {
+    background: #1A1E23;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 17px;
+    height: 80px;
+}
+
+.card:hover {
+    border: 1px solid #4789EB;
+    background: #323c42;
+}
+
+.position {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 15px 0 0;
+    color: #FFFFFF;
+}
+
+.avatar {
+    margin-right: 10px;
+}
+
+.name {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.lvl {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: #4789EB;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+}
