@@ -97,3 +97,15 @@
     margin-left: auto;
 }
 
+@media (max-width: 800px) {
+    .page {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+    }
+    .nft {
+        width: 100%;
+    }
+}
+
