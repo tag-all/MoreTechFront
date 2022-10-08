@@ -7,10 +7,6 @@ import {ActivitySection} from "../../pages/MainPage/sections/ActivitySection/Act
 export const Profile = () => {
 
 
-    const profile = {
-
-    }
-
 
 
     const events = [
