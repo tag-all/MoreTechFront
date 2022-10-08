@@ -1,0 +1,60 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0 50px 0;
+}
+
+.title {
+    font-family: 'Raleway Bold', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.communities {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.communitiesItem {
+    background: rgba(12, 15, 18, 0.8);
+    border: 1px solid #333941;
+    border-radius: 9px;
+    padding: 12px;
+    width: 220px;
+}
+
+.communitiesItemTitle {
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    margin: 5px 0;
+}
+
+.communitiesItemSize {
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+    margin: 5px 0;
+}
+
+.nft {
+    width: 100%;
+}
