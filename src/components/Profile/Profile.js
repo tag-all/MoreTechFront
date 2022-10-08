@@ -9,10 +9,8 @@ export const Profile = () => {
 
 
     const profile =  {
-        user: {
-            name: 'Egor',
-            surname: 'Mit'
-        }
+       "lastName" : "Mitr",
+        "name" : "Egor",
     }
 
 
@@ -40,7 +38,7 @@ export const Profile = () => {
                 <div className={styles.bar}>
                     <div className={styles.barFlex}>
                         <div className={styles.lvl}>4</div>
-                        <p className={styles.par}>{profile.user.name}{profile.user.surname}</p>
+                        <p className={styles.par}>{profile.name}{profile.lastName}</p>
                         <div className={styles.random}>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="32" height="32" rx="9" fill="#0C0F12" fill-opacity="0.8"/>
@@ -54,7 +52,7 @@ export const Profile = () => {
                     </button>
                 </div>
                 <NFTCards/>
-                <ActivitySection/>
+                <ActivitySection />
                 <section className={styles.section}>
                     <h2 className="section__title">
                         Ближайшие мероприятия
