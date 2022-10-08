@@ -63,3 +63,13 @@
     text-align: left;
 
 }
+
+
+@media (max-width: 720px ) {
+    .header{
+        display: block;
+    }
+    .right{
+        display: none;
+    }
+}
