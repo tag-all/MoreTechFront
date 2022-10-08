@@ -36,6 +36,9 @@ export const NavigationMenu = ({
                     <Link to="/achievements" className={styles.navigationLinksItem}>
                         Достижения
                     </Link>
+                    <Link to="/transfer" className={styles.navigationLinksItem}>
+                        Переводы
+                    </Link>
                 </div>
             </div>
         </>
