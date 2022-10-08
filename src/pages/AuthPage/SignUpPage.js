@@ -2,11 +2,15 @@ import styles from './AuthPageWrapper.module.css'
 import {AuthPageWrapper} from "./AuthPageWapper";
 import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
+import {signUp} from "../../api/api";
 
 export const SignUpPage = () => {
 
 	const { register, handleSubmit } = useForm()
-	const onSubmit = data => console.log(data)
+	const onSubmit = data => {
+		console.log(data)
+		signUp(data.email, data.name, data.lastName, data.password)
+	}
 
 	return (
 		<AuthPageWrapper>
@@ -27,7 +31,7 @@ export const SignUpPage = () => {
 
 						<div className={styles.inputWrapper}>
 							<p className={styles.inputTitle}>Фамилия</p>
-							<input {...register("secondName", { required: true })} className="input"/>
+							<input {...register("lastName", { required: true })} className="input"/>
 						</div>
 
 						<div className={styles.inputWrapper}>
