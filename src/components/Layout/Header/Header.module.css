@@ -22,8 +22,18 @@
     display: flex;
     justify-content: left;
 }
+.s{
+    display: block;
+}
 
 .logo {
     align-items: center;
     display: flex;
+    margin-right: 20px;
+}
+
+@media (max-height: 720px) {
+    .s {
+        visibility: hidden;
+    }
 }

@@ -1,5 +1,15 @@
 import {AchievementCard} from "../AchievementCard/AchievementCard";
-import { SimpleGrid, Flex } from "@chakra-ui/react"
+import { SimpleGrid, Flex, extendTheme } from "@chakra-ui/react"
+
+
+const breakpoints = {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+}
+const theme = extendTheme({ breakpoints })
 
 const achievement = [
     {
@@ -49,12 +59,13 @@ export const AchievementSection = () => {
         <Flex as={'section'} >
             <SimpleGrid
                 as={'section'} p={0}
-                columns={[1, 1, 3, 4]}
+                columns={4}
                 spacingX='20px' spacingY='20px'
             >
                 {
                     achievement.map((item, index) => {
                         return <AchievementCard
+                            key={index}
                             isAchieved={item.isAchieved}
                             name={item.name}
                             date={item.date}

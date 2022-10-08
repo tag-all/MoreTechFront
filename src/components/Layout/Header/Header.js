@@ -24,7 +24,9 @@ export const Header = () => {
                 <Link to={'/'} className={styles.logo}>
                     <Logo/>
                 </Link>
-                <Search/>
+                <div className={styles.s}>
+                    <Search placeholder={'Поиск NFT, коллекций и пользователей'}/>
+                </div>
             </div>
             <div className={styles.right} >
                 <BalanceBox amount={35}/>

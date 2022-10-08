@@ -4,7 +4,7 @@ import {Profile} from "../../components/Profile/Profile";
 export const ProfilePage = () => {
     return (
         <Layout>
-            <Profile/>
+                <Profile/>
         </Layout>
     );
 };

@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Search.module.css';
 import {SearchIcon} from "../../assets/svg/SearchIcon";
+import {Box} from "@chakra-ui/react"
 
-export const Search = () => {
+export const Search = ({placeholder}) => {
     return (
-        <div className={styles.search}>
+        <Box className={styles.search}>
             <SearchIcon/>
-            <input className={styles.input} placeholder={'Поиск NFT, коллекций и пользователей'}/>
-        </div>
+            <input className={styles.input} placeholder={placeholder}/>
+        </Box>
     )
 }

@@ -3,8 +3,17 @@ import styles from './Profile.module.css';
 import {ArrowButton} from "../../assets/svg/ArrowButton";
 import {EventCard} from "../EventCard/EventCard";
 import {ActivitySection} from "../../pages/MainPage/sections/ActivitySection/ActivitySection";
+import {NFTCards} from "../NFTCards/NFTCards";
 
 export const Profile = () => {
+
+
+    const profile =  {
+        user: {
+            name: 'Egor',
+            surname: 'Mit'
+        }
+    }
 
 
 
@@ -31,7 +40,7 @@ export const Profile = () => {
                 <div className={styles.bar}>
                     <div className={styles.barFlex}>
                         <div className={styles.lvl}>4</div>
-                        <p className={styles.par}>EgorMit</p>
+                        <p className={styles.par}>{profile.user.name}{profile.user.surname}</p>
                         <div className={styles.random}>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="32" height="32" rx="9" fill="#0C0F12" fill-opacity="0.8"/>
@@ -44,6 +53,8 @@ export const Profile = () => {
                         <p className={styles.par}>Перевод</p>
                     </button>
                 </div>
+                <NFTCards/>
+                <ActivitySection/>
                 <section className={styles.section}>
                     <h2 className="section__title">
                         Ближайшие мероприятия
@@ -61,7 +72,6 @@ export const Profile = () => {
                         }
                     </div>
                 </section>
-                <ActivitySection/>
             </div>
         </section>
     )
