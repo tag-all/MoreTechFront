@@ -1,0 +1,99 @@
+.page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.title {
+    font-family: 'Raleway Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.ownerContainer {
+    background: rgba(12, 15, 18, 0.8);
+    border-radius: 9px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 20px;
+    justify-content: space-between;
+}
+
+.text {
+    font-family: 'Raleway Medium', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.owner {
+    font-family: 'Raleway Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4789EB;
+    letter-spacing: 0.5px;
+}
+
+.sellCard {
+    background: rgba(12, 15, 18, 0.8);
+    border-radius: 9px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.sellCard > button {
+    margin: 5px 0;
+}
+
+.priceCard {
+    background: #333941;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: 'Raleway Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 10px 0 5px 0;
+}
+
+.nft {
+    width: 62%;
+    margin-left: auto;
+}
+
