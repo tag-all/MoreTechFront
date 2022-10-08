@@ -6,6 +6,7 @@ import {TopUsers} from "./sections/TopUsers/TopUsers";
 import {EventsSection} from "./sections/EventsSection/EventsSection";
 import {ActivitySection} from "./sections/ActivitySection/ActivitySection";
 import {UsersSection} from "./sections/UsersSection/UsersSection";
+import {TopCommunitiesSection} from "./sections/TopCommunitiesSection/TopCommunitiesSection";
 
 export const MainPage = () => {
 	return (
@@ -13,6 +14,7 @@ export const MainPage = () => {
 			<Layout>
 				<MainSection />
 				<OffersSection />
+				<TopCommunitiesSection />
 				<TopUsers />
 				<EventsSection />
 				<ActivitySection />
