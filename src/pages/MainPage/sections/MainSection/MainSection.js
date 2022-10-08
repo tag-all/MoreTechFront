@@ -1,4 +1,5 @@
 import style from './MainSection.module.css'
+import {Link} from "react-router-dom";
 
 export const MainSection = () => {
 	return (
@@ -10,7 +11,7 @@ export const MainSection = () => {
 				Не знаете, как использовать NFT? MORE.Tech NFT легко позволит собирать, дарить, обменивать NFT,
 				участвуя в мероприятиях и получая подарки за использование!
 			</p>
-			<button className="btn_filled">Зарегистрироваться</button>
+			<Link to={'/sign-up'} className="btn_filled">Зарегистрироваться</Link>
 		</section>
 	)
 }

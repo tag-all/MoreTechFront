@@ -1,0 +1,86 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bg {
+    height: 100%;
+    width: 350px;
+    background-image: url("../../assets/svg/authBg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formBg {
+    background: #1A1E23;
+    height: 100%;
+    flex-grow: 1;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    font-family: 'Raleway Bold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.inputTitle {
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.btnWrapper {
+    margin-top: 20px;
+}
+
+.btnWrapper > button {
+    width: 100%;
+}
+
+.smallText {
+    font-family: 'Raleway Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.link {
+    composes: smallText;
+    text-decoration: underline;
+}
