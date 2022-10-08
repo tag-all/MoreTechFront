@@ -1,3 +1,15 @@
+.eventsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.section {
+    background: rgb(51,57,65,0.2);
+    border-radius: 9px;
+    padding: 20px 50px;
+    width: var(--width);
+    margin: 30px 0;
+}
 .profile {
     display: flex;
     align-items: center;
@@ -6,6 +18,30 @@
     --width: 782px;
 }
 
+.profileWrapper {
+    font-family: 'Raleway Medium', sans-serif;
+    width: var(--width);
+}
+
+.random{ margin-left: 10px}
+
+.lvl {
+    width: 45px;
+    height: 45px;
+    background: var(--color-blue);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Raleway Medium', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin: 0;
+}
 .picture {
     margin-top: 50px;
     margin-bottom: 70px;
@@ -63,3 +99,4 @@
 .progress {
     display: block;
 }
+
