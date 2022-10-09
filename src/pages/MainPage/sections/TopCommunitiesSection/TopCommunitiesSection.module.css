@@ -58,3 +58,24 @@
 .nft {
     width: 100%;
 }
+
+.animate {
+    animation-name: bounce;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    box-shadow: 4px 12px 12px 4px #1A1E23;
+}
+
+.animate:hover {
+    animation-name: rotate;
+    animation-duration: 1.5s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: translate(0, -2rem);;
+    }
+}

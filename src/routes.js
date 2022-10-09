@@ -6,6 +6,7 @@ import {SignUpPage} from "./pages/AuthPage/SignUpPage";
 import {SignInPage} from "./pages/AuthPage/SignInPage";
 import {TransferPage} from "./pages/TransferPage/TransferPage";
 import {NftDetailsPage} from "./pages/NftDetailsPage/NftDetailsPage";
+import {ChoosePage} from "./pages/ChoosePage/ChoosePage";
 
 export const useRoutes = () => {
 	return (
@@ -17,6 +18,7 @@ export const useRoutes = () => {
 			<Route path="/achievements" element={<AchievementsPage/>}/>
 			<Route path="/transfer" element={<TransferPage />}/>
 			<Route path="/nft-details" element={<NftDetailsPage />}/>
+			<Route path="/choose" element={<ChoosePage />}/>
 		</Routes>
 	)
 }

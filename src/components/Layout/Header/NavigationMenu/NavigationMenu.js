@@ -3,6 +3,7 @@ import styles from './NavigationMenu.module.css';
 import close from '../../../../assets/svg/Cross.svg'
 import enter from '../../../../assets/svg/Enter.svg'
 import {Link} from "react-router-dom";
+import {Box, Flex, chakra, Text} from "@chakra-ui/react"
 
 export const NavigationMenu = ({
     isOpen,
@@ -40,6 +41,7 @@ export const NavigationMenu = ({
                         Переводы
                     </Link>
                 </div>
+                <Box top={'0px'} w={'100%'} h={'89px'} bg={'#333941'} borderRadius={'8px'}/>
             </div>
         </>
     );

@@ -1,6 +1,5 @@
 import {Box, Flex, chakra, Text} from "@chakra-ui/react"
 import {Search} from "../Search/Search";
-import {TopCommunitiesSection} from "../../pages/MainPage/sections/TopCommunitiesSection/TopCommunitiesSection";
 import styles from "../../pages/MainPage/sections/TopCommunitiesSection/TopCommunitiesSection.module.css";
 import droid from "../../assets/img/droid.png";
 import veiderTop from "../../assets/img/veider2.png";
