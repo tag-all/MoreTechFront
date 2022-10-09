@@ -19,7 +19,6 @@ const AuthContext = ({children}) => {
 		[setAccessToken],
 	)
 
-
 	const getUserData = useCallback(
 		async () => {
 			if (accessToken) {
