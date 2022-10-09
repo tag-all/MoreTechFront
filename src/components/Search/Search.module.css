@@ -1,7 +1,7 @@
 .search {
     display: flex;
     --w-search: 358px;
-    --h-seacrh: 25px;
+    --h-seacrh: 35px;
     width: var(--w-search);
     height: var(--h-seacrh);;
     border: 1px solid white;
