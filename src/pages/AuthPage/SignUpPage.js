@@ -1,15 +1,24 @@
 import styles from './AuthPageWrapper.module.css'
 import {AuthPageWrapper} from "./AuthPageWapper";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {signUp} from "../../api/api";
+import {useAuthContext} from "../../context/AuthContext";
+import toast from "react-hot-toast";
 
 export const SignUpPage = () => {
 
 	const { register, handleSubmit } = useForm()
+	const {setAccessToken} = useAuthContext()
+	const navigate = useNavigate()
 	const onSubmit = data => {
 		console.log(data)
-		signUp(data.email, data.name, data.lastName, data.password)
+		signUp(data.email, data.name, data.lastName, data.password).then((token) => {
+			setAccessToken(token)
+			toast.success('Пользователь зарегистрирован')
+		}).then(() => {
+			navigate('/')
+		})
 	}
 
 	return (

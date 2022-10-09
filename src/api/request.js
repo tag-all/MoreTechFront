@@ -1,13 +1,17 @@
 import {BASE_API_URL} from "../config";
+import toast from "react-hot-toast";
 
 export const request = async (url, method = 'GET', body = null ) => {
 	let response
-	// console.log('request body', body)
+
+	const token = localStorage.getItem('token')
+
 	let options = {
 		method: method,
 		headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${token}`
 		}
 	}
 
@@ -18,25 +22,16 @@ export const request = async (url, method = 'GET', body = null ) => {
 	try {
 		response = await fetch(`${BASE_API_URL}${url}`, options)
 
-		console.log('request response', response)
 
 		if (response.ok) {
 			return response.json()
-		} else if (response.status === 500 || response.status === null) {
-			console.log("ERROR 500")
-			window.location.href = '/maintenance'
 		} else {
 			const responseJson = await response.json()
-			console.log('status', response.status)
-			// console.log('request responseJson', responseJson)
+			console.log('request response', responseJson)
+			toast.error(responseJson.message)
 			throw new Error(await responseJson.message)
 		}
 	} catch (e) {
-		// console.log('request error: ', e.message)
-		// if (response.status === 500) {
-		// 	console.log("ERROR 500")
-		// 	window.location.href = '/maintenance'
-		// }
 		throw e
 	}
 }
