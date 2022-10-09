@@ -8,6 +8,7 @@ import veider from "../../assets/img/veider.png";
 
 export const ChoosePage = () => {
     let images = {}
+    const govno = []
 
     fetch('http://192.168.0.108/api/v1/clan/nft/', {
         method: 'POST',
