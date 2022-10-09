@@ -1,10 +1,6 @@
 import {Box, Flex, chakra, Text, Button} from "@chakra-ui/react"
 import {Layout} from "../../components/Layout/Layout";
 import styles from "../MainPage/sections/TopCommunitiesSection/TopCommunitiesSection.module.css";
-import droid from "../../assets/img/droid.png";
-import veiderTop from "../../assets/img/veider2.png";
-import yoda from "../../assets/img/yoda.png";
-import veider from "../../assets/img/veider.png";
 import {getFirstNFTs, getItem, signToClan} from "../../api/api";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";

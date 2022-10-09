@@ -7,6 +7,7 @@ import {SignInPage} from "./pages/AuthPage/SignInPage";
 import {TransferPage} from "./pages/TransferPage/TransferPage";
 import {NftDetailsPage} from "./pages/NftDetailsPage/NftDetailsPage";
 import {ChoosePage} from "./pages/ChoosePage/ChoosePage";
+import {MarketPlacePage} from "./pages/MarketPlacePage/MarketPlacePage"
 
 export const useRoutes = () => {
 	return (
@@ -19,6 +20,8 @@ export const useRoutes = () => {
 			<Route path="/transfer" element={<TransferPage />}/>
 			<Route path="/nft-details" element={<NftDetailsPage />}/>
 			<Route path="/choose" element={<ChoosePage />}/>
+			<Route path="/marketplace" element={<MarketPlacePage />}/>
+
 		</Routes>
 	)
 }
