@@ -31,6 +31,7 @@ export const EventsSection = () => {
 							description={event.description}
 							date={event.date}
 							rewards={event.rewards}
+							key={index}
 						/>
 					})
 				}

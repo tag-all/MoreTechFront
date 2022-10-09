@@ -39,7 +39,7 @@ export const TopUsers = () => {
 				<div className={styles.usersColumn}>
 					{
 						users.map((user, index) => {
-							return <TopUserCard position={index + 1} name={user.name} lvl={user.lvl}/>
+							return <TopUserCard position={index + 1} name={user.name} lvl={user.lvl} key={index}/>
 						})
 					}
 				</div>

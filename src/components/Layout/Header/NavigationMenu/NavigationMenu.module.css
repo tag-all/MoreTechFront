@@ -90,3 +90,7 @@
     color: #FFFFFF;
     margin: 0 10px 0 0;
 }
+
+.enter {
+    cursor: pointer;
+}
