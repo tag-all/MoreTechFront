@@ -125,3 +125,8 @@ p {
   font-family: 'Raleway Bold';
   src: url('./assets/fonts/Raleway-SemiBold.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Raleway ExtraBold';
+  src: url('./assets/fonts/Raleway-Bold.ttf') format('truetype');
+}

@@ -28,7 +28,7 @@ export const Header = () => {
                     <Logo/>
                 </Link>
                 <div className={styles.s}>
-                    <Search placeholder={'Поиск NFT, коллекций и пользователей'}/>
+                    <Search placeholder={'Поиск NFT, мероприятий и пользователей'}/>
                 </div>
             </div>
             {
