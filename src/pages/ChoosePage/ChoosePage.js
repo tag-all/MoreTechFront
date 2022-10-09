@@ -27,6 +27,7 @@ export const ChoosePage = () => {
         })
     }
 
+    let k = 0
     useEffect(() => {
         f()
     }, [])
