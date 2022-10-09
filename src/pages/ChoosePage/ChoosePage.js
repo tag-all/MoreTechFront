@@ -5,19 +5,21 @@ import droid from "../../assets/img/droid.png";
 import veiderTop from "../../assets/img/veider2.png";
 import yoda from "../../assets/img/yoda.png";
 import veider from "../../assets/img/veider.png";
-import {getFirstNFTs, getItem} from "../../api/api";
+import {getFirstNFTs, getItem, signToClan} from "../../api/api";
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export const ChoosePage = () => {
     let url = 'http://192.168.0.108:10880/api/v1/files/'
     const [data, setData] = useState([])
+    const navigate = useNavigate()
     const f = async () => {
         let arr = []
         getFirstNFTs().then((images) => {
             for (let i of images) {
                 //let inc = 0;
-                //console.log(i.start_img)
-                arr.push(i.start_img)
+                console.log(i)
+                arr.push(i)
                 //inc++
             }
             //console.log('данные' + arr)
@@ -35,18 +37,20 @@ export const ChoosePage = () => {
         <Layout>
             <Box color={'white'} m={'auto'} w={'100%'} h={'100%'}>
                 <Text as={'h1'} fontSize={'24px'} w={'100%'} align={'center'} fontWeigth={'700'}>
-                    Выберете свой первый NFT
+                    Выберете свой первый NFT <br/>и присоединитесь к сообществу
                 </Text>
                 <Box mt={'50px'}>
-                    <div className={styles.communities}
-                         onClick={(event) => {
-
-                         }}
-                    >
+                    <div className={styles.communities}>
                         {
                             data.map((el, index) => {
-                                    return (<div className={`${styles.communitiesItem} ${styles.animate}`}>
-                                        <img src={`${url}${el}`} alt="" className={styles.nft} key={index}/>
+                                    return (<div className={`${styles.communitiesItem} ${styles.animate}`}
+                                                 onClick={() => {
+                                                     signToClan(el.id)
+                                                     navigate('/profile')
+                                                 }}
+                                    >
+                                        <img src={`${url}${el.start_img}`} alt="" className={styles.nft} key={index}/>
+                                        <p className={styles.communitiesItemTitle}>{el.name}</p>
                                     </div>)
                                 }
                             )
@@ -54,7 +58,7 @@ export const ChoosePage = () => {
                     </div>
                 </Box>
                 <Flex justify={'center'} w={'100%'}>
-                    <Button color={'white'} border={'1px solid #4789EB'} bg={'#4789EB'} mt={'100px'} w={'315px'}
+                    <Button display={'none'} color={'white'} border={'1px solid #4789EB'} bg={'#4789EB'} mt={'100px'} w={'315px'}
                             h={'38px'} borderRadius={'4px'}>
                         Подтвердить выбор
                     </Button>

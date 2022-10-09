@@ -38,3 +38,7 @@ export const getItem = async (item) => {
 	console.log('response', response)
 	return response
 }
+
+export const signToClan = async (id) => {
+	request(`/clans/${id}`, 'POST', null)
+}
