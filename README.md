@@ -9,4 +9,5 @@
 </ol>
 Frontend запущен!
 Спасибо за внимание.
+Figma: https://www.figma.com/file/dQ8bN1GrjcOi1i8a1BBR4D/MORE.Tech-Hack?node-id=0%3A1
 </div>
