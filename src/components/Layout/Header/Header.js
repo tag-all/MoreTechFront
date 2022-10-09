@@ -6,6 +6,7 @@ import {BalanceBox} from "./BalanceBox/BalanceBox";
 import {Logo} from "../../../assets/svg/Logo";
 import {MenuIcon} from "../../../assets/svg/MenuIcon";
 import {Link} from "react-router-dom";
+import {useAuthContext} from "../../../context/AuthContext";
 
 
 export const Header = () => {
@@ -14,12 +15,14 @@ export const Header = () => {
         setIsNavigationMenuOpen((prevState) => !prevState);
     };
 
+    const {userData} = useAuthContext()
+
     return (
         <header className={styles.header}>
-            <NavigationMenu
+            { userData && <NavigationMenu
                 isOpen={isNavigationMenuOpen}
                 closeHandler={toggleIsNavigationMenuOpen}
-            />
+            />}
             <div className={styles.left}>
                 <Link to={'/'} className={styles.logo}>
                     <Logo/>
@@ -28,10 +31,16 @@ export const Header = () => {
                     <Search placeholder={'Поиск NFT, коллекций и пользователей'}/>
                 </div>
             </div>
-            <div className={styles.right} >
-                <BalanceBox amount={35}/>
-                <MenuIcon onClick={toggleIsNavigationMenuOpen}/>
-            </div>
+            {
+                userData ? (
+                    <div className={styles.right} >
+                        <BalanceBox amount={userData.balance.coinsAmount}/>
+                        <MenuIcon onClick={toggleIsNavigationMenuOpen}/>
+                    </div>
+                ) : (
+                    <Link to={'/sign-in'} className="btn_filled">Вход</Link>
+                )
+            }
         </header>
     );
 };

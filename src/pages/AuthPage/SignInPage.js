@@ -2,11 +2,25 @@ import styles from './AuthPageWrapper.module.css'
 import {AuthPageWrapper} from "./AuthPageWapper";
 import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
+import {signIn} from "../../api/api";
+import {useAuthContext} from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom"
+import toast from "react-hot-toast";
 
 export const SignInPage = () => {
 
 	const { register, handleSubmit } = useForm()
-	const onSubmit = data => console.log(data)
+	const {setAccessToken} = useAuthContext()
+	const navigate = useNavigate()
+	const onSubmit = data => {
+		console.log(data)
+		signIn(data.login, data.password).then((token) => {
+			setAccessToken(token)
+			toast.success('Вход выполнен')
+		}).then(() => {
+			navigate('/')
+		})
+	}
 
 	return (
 		<AuthPageWrapper>
@@ -17,7 +31,7 @@ export const SignInPage = () => {
 
 						<div className={styles.inputWrapper}>
 							<p className={styles.inputTitle}>E-mail</p>
-							<input type="email" {...register("email", { required: true })} className="input"/>
+							<input type="email" {...register("login", { required: true })} className="input"/>
 						</div>
 
 						<div className={styles.inputWrapper}>

@@ -4,13 +4,14 @@ import close from '../../../../assets/svg/Cross.svg'
 import enter from '../../../../assets/svg/Enter.svg'
 import {Link} from "react-router-dom";
 import {Box, Flex, chakra, Text} from "@chakra-ui/react"
+import {useAuthContext} from "../../../../context/AuthContext";
 
 export const NavigationMenu = ({
     isOpen,
     closeHandler,
 }) => {
 
-    const userName = 'Ясос Биба'
+    const {userData, logout} = useAuthContext()
 
     return (
         <>
@@ -21,8 +22,8 @@ export const NavigationMenu = ({
                 }
             >
                 <div className={styles.header}>
-                    <p className={styles.name}>{userName}</p>
-                    <img src={enter} alt="sign in" className={styles.enter}/>
+                    <p className={styles.name}>{userData.name} {userData.lastName}</p>
+                    <img src={enter} alt="sign out" className={styles.enter} onClick={() => {logout()}}/>
                     <button className={styles.closeBtn} onClick={closeHandler}>
                         <img src={close} alt="close"/>
                     </button>

@@ -38,6 +38,7 @@ export const ActivitySection = () => {
 									description={item.description}
 									date={item.date}
 									img={item.img}
+									key={index}
 								/>
 					})
 				}
