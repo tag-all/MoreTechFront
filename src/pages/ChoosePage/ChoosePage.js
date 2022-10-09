@@ -5,22 +5,32 @@ import droid from "../../assets/img/droid.png";
 import veiderTop from "../../assets/img/veider2.png";
 import yoda from "../../assets/img/yoda.png";
 import veider from "../../assets/img/veider.png";
+import {getFirstNFTs, getItem} from "../../api/api";
+import {useEffect, useState} from "react";
 
 export const ChoosePage = () => {
-    let images = {}
-    const govno = []
-
-    fetch('http://192.168.0.108/api/v1/clan/nft/', {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-            images = data
+    let url = 'http://192.168.0.108:10880/api/v1/files/'
+    const [data, setData] = useState([])
+    const f = async () => {
+        let arr = []
+        getFirstNFTs().then((images) => {
+            for (let i of images) {
+                //let inc = 0;
+                //console.log(i.start_img)
+                arr.push(i.start_img)
+                //inc++
+            }
+            //console.log('данные' + arr)
+            setData(arr)
         })
+    }
+
+    useEffect(() => {
+        f()
+    }, [])
+
+    console.log("data alc,we" + data)
+
     return (
         <Layout>
             <Box color={'white'} m={'auto'} w={'100%'} h={'100%'}>
@@ -30,26 +40,17 @@ export const ChoosePage = () => {
                 <Box mt={'50px'}>
                     <div className={styles.communities}
                          onClick={(event) => {
-                             let target = event.target
 
                          }}
                     >
-                        <div className={`${styles.communitiesItem} ${styles.animate}`}>
-                            <img src={droid} alt="" className={styles.nft}/>
-                            <p className={styles.communitiesItemTitle}>Cars</p>
-                        </div>
-                        <div className={`${styles.communitiesItem} ${styles.animate}`}>
-                            <img src={veiderTop} alt="" className={styles.nft}/>
-                            <p className={styles.communitiesItemTitle}>Lord of the Rings</p>
-                        </div>
-                        <div className={`${styles.communitiesItem} ${styles.animate}`}>
-                            <img src={yoda} alt="" className={styles.nft}/>
-                            <p className={styles.communitiesItemTitle}>Science fiction</p>
-                        </div>
-                        <div className={`${styles.communitiesItem} ${styles.animate}`}>
-                            <img src={veider} alt="" className={styles.nft}/>
-                            <p className={styles.communitiesItemTitle}>Star Wars</p>
-                        </div>
+                        {
+                            data.map((el, index) => {
+                                    return (<div className={`${styles.communitiesItem} ${styles.animate}`}>
+                                        <img src={`${url}${el}`} alt="" className={styles.nft} key={index}/>
+                                    </div>)
+                                }
+                            )
+                        }
                     </div>
                 </Box>
                 <Flex justify={'center'} w={'100%'}>

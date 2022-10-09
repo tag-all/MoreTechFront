@@ -26,3 +26,15 @@ export const getProfile = async () => {
 	console.log('response', response)
 	return response
 }
+
+export const getFirstNFTs = async () => {
+	const response = await request('/clans')
+	console.log('response', response)
+	return response
+}
+
+export const getItem = async (item) => {
+	const response = await request(`/files/${item}`)
+	console.log('response', response)
+	return response
+}
